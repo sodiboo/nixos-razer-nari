@@ -1,0 +1,27 @@
+{
+  "nodes": {
+    "nari": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686086716,
+        "narHash": "sha256-zt5Bb6VoN7ivVaEwblEIfS5aHR4hBU0X9yZ+Eg5m4PM=",
+        "owner": "mrquantumoff",
+        "repo": "razer-nari-pipewire-profile",
+        "rev": "39596e7d3c30abe04f8713cd709f6eec5816be48",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mrquantumoff",
+        "repo": "razer-nari-pipewire-profile",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nari": "nari"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
