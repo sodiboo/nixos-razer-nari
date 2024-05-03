@@ -38,6 +38,26 @@
         # But, wireplumber is the session manager! pipewire doesn't care.
         # So, this wireplumber package is distinct in its dependency on pipewire.
         pipewire.wireplumber.package = nari-pkgs.wireplumber;
+
+        pipewire.wireplumber.extraConfig."20-rename-nari" = {
+          "monitor.alsa.rules" = [
+            {
+              matches = [
+                  {"node.name" = "alsa_output.usb-Razer_Razer_Nari-00.analog-game";}
+              ];
+
+              actions.update-props."node.nick" = "Razer Nari (Game)";
+            }
+            {
+              matches = [
+                {"node.name" = "alsa_output.usb-Razer_Razer_Nari-00.analog-chat";}
+                {"node.name" = "alsa_input.usb-Razer_Razer_Nari-00.analog-chat";}
+              ];
+
+              actions.update-props."node.nick" = "Razer Nari (Chat)";
+            }
+          ];
+        };
       };
     };
   };
